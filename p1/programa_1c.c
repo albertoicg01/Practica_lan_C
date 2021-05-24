@@ -8,7 +8,7 @@ DESC    : A simple C program.
 #include<stdio.h>
 int main(){
     //Type your code here
-    float sum=0, num=0,subjects=0;
+    float sum=0, num=0,subjects=1;
     
     printf("----------------------------------\n");
     printf("Programa que calcula promedios\n");
@@ -18,7 +18,7 @@ int main(){
     do
     {   
 
-        printf("Introduce tu calificacion de la materia %f: ",(subjects+1));    
+        printf("Introduce tu calificacion de la materia %f: ",subjects);    
         scanf("%f",&num);
 
         //Excluye la bandera para terminar el programa        
@@ -37,8 +37,10 @@ int main(){
     } while (num!=-1);
 
 
-    printf("\t\n\tsubjects es: %f \n",subjects);
-    printf("\t\n\tsum es: %f \n",sum);
+    subjects-=1;
+
+    printf("\t\n\tAsignaturas inscritas: %f \n",subjects);
+    printf("\t\n\tTu puntaje total: %f \n",sum);
     printf("\t\n\tTu promedio es: %f \n",(sum/subjects));
 
     return 0;
